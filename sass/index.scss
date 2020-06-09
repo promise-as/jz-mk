@@ -431,7 +431,7 @@ input[type="submit"] {
       }
     }
     .c-item {
-      @extend %in-b;
+      display: none;
       select {
         float: left;
         width: 186px;
@@ -445,6 +445,10 @@ input[type="submit"] {
         margin-bottom: 14px;
         &:nth-of-type(2) {
           margin-left: 10px;
+        }
+        &.w-all{
+          width: 100%;
+          background: url(../images/select.png) no-repeat 96%;
         }
       }
       input {
@@ -467,6 +471,9 @@ input[type="submit"] {
         font-size: 18px;
         font-weight: bold;
         background: url(../images/bm-btn.png) no-repeat;
+      }
+      &.on{
+        display: block;
       }
     }
   }
