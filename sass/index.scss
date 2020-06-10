@@ -1,6 +1,3 @@
-body {
-  // background: #ccc;
-}
 $textIndent: 1rem;
 input[type="text"],
 select {
@@ -116,7 +113,7 @@ input[type="submit"] {
 
 // 01_建筑软文左侧浮窗
 .left-fixed {
-  // display: none;
+  display: none;
   width: 180px;
   padding: 17px 0;
   color: #fff;
@@ -301,7 +298,7 @@ input[type="submit"] {
     padding-top: 30px;
     .r-hint {
       height: 18px;
-      background: url(../images/dh.png) no-repeat center;
+      background: url(../images/dh_1.png) no-repeat center;
       margin-bottom: 10px;
     }
     .r-applet {
@@ -322,6 +319,7 @@ input[type="submit"] {
 }
 // 03_建筑热点模块1100px
 .jz-rd {
+  display: none;
   width: 1100px;
   margin: 10px auto;
   font-size: 14px;
@@ -410,6 +408,7 @@ input[type="submit"] {
     text-align: center;
     background: url(../images/bg_3.jpg) no-repeat;
     font-size: 14px;
+    margin-right: 20px;
     .bm-head {
       font-size: 16px;
       @extend %clearfix;
@@ -444,9 +443,10 @@ input[type="submit"] {
         background: url(../images/select.png) no-repeat 90%;
         margin-bottom: 14px;
         &:nth-of-type(2) {
+          float: right;
           margin-left: 10px;
         }
-        &.w-all{
+        &.w-all {
           width: 100%;
           background: url(../images/select.png) no-repeat 96%;
         }
@@ -460,7 +460,7 @@ input[type="submit"] {
       input[type="text"] {
         width: 382px;
         border: solid 1px #e0e0e0;
-        margin-bottom: 20px;
+        margin-bottom: 14px;
       }
       input[type="submit"] {
         width: 386px;
@@ -471,9 +471,760 @@ input[type="submit"] {
         font-size: 18px;
         font-weight: bold;
         background: url(../images/bm-btn.png) no-repeat;
+        margin-top: 6px;
       }
-      &.on{
+      &.on {
         display: block;
+      }
+    }
+  }
+  // 福利区
+  .rd-fl {
+    float: left;
+    width: 318px;
+    height: 300px;
+    padding: 20px 17px 15px;
+    box-sizing: border-box;
+    background: url(../images/bg_4.jpg) no-repeat;
+    text-align: center;
+    .rd-bt {
+      @include beforeAfter(34px, 1px, rgba(229, 229, 229, 0.23), 0, 0);
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .fl-cont {
+      height: 221px;
+      padding: 0 9px;
+      box-sizing: border-box;
+      background: url(../images/bg_5.png) no-repeat;
+      color: #666666;
+      ul {
+        padding: 10px 20px 0;
+        @extend %clearfix;
+        li {
+          float: left;
+          width: 50%;
+          margin-bottom: 12px;
+        }
+      }
+      .fl-btn {
+        display: block;
+        width: 100%;
+        height: 42px;
+        line-height: 42px;
+        background-image: linear-gradient(124deg, #f47d1e 0%, #fbcb4b 100%), linear-gradient(#fc8f1a, #fc8f1a);
+        background-blend-mode: normal, normal;
+        box-shadow: 0px 3px 6px 0px rgba(244, 125, 30, 0.4);
+        border-radius: 21px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    }
+  }
+  // 03_建筑热点模块1200px
+  &.w1200 {
+    width: 1200px;
+    // 常见问题
+    .rd-wt {
+      width: 368px;
+    }
+    // 福利区
+    .rd-fl {
+      width: 368px;
+      padding: 20px;
+      background: url(../images/bg_4_1200.jpg) no-repeat;
+      .fl-cont {
+        padding: 30px 0;
+        background: url(../images/bg_5_1200.png) no-repeat;
+        ul {
+          padding: 0;
+          margin-bottom: 30px;
+          li {
+            width: 25%;
+          }
+        }
+        .fl-btn {
+          width: 266px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+// 04_建筑热点模块-题库1100px
+.jz-tk {
+  display: none;
+  width: 1100px;
+  margin: 10px auto;
+  font-size: 14px;
+  @extend %clearfix;
+  .tk-data {
+    float: left;
+    width: 380px;
+    height: 300px;
+    padding: 25px 30px 0;
+    box-sizing: border-box;
+    background: url(../images/bg_6.png) no-repeat;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    .d-limit {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .d-bt {
+      font-size: 22px;
+      line-height: 22px;
+      @include beforeAfter(25px, 2px, #68b4f7, 34px, 34px);
+      margin-bottom: 8px;
+    }
+    .d-get {
+      height: 60px;
+      margin-bottom: 8px;
+      img {
+        height: 100%;
+      }
+    }
+    .d-explain {
+      @extend %in-b;
+      padding: 0 12px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 16px;
+      border: solid 1px #ffffff;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      height: 42px;
+      line-height: 42px;
+      background-color: #ffffff;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    input[type="submit"] {
+      background-image: linear-gradient(124deg, #f47d1e 0%, #fbcb4b 100%), linear-gradient(#77b2e0, #77b2e0);
+      background-blend-mode: normal, normal;
+      box-shadow: 0px 3px 9px 0px rgba(244, 125, 30, 0.43);
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+  }
+  .tk-zt {
+    float: left;
+    width: 720px;
+    height: 300px;
+    background-color: #e1f1ff;
+    border-radius: 12px;
+    .zt-xz {
+      @extend %clearfix;
+      padding-left: 20px;
+      padding-top: 30px;
+      .xz-item {
+        float: left;
+        width: 220px;
+        height: 80px;
+        padding: 15px 0 0 15px;
+        box-sizing: border-box;
+        background: url(../images/bg_7.png) no-repeat;
+        margin-right: 12px;
+        position: relative;
+        .i-name {
+          font-size: 16px;
+          line-height: 28px;
+          color: #444444;
+        }
+        .i-time {
+          font-size: 12px;
+          color: #888888;
+        }
+        .i-btn {
+          padding: 0 8px 0 14px;
+          height: 32px;
+          line-height: 32px;
+          background-image: linear-gradient(124deg, #f47d1e 0%, #fbcb4b 100%), linear-gradient(#3791e1, #3791e1);
+          background-blend-mode: normal, normal;
+          box-shadow: 0px 3px 6px 0px rgba(244, 125, 30, 0.4);
+          border-radius: 16px 0px 0px 16px;
+          font-size: 14px;
+          color: #ffffff;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+    }
+    ul {
+      padding-top: 34px;
+      font-size: 14px;
+      line-height: 36px;
+      height: 186px;
+      box-sizing: border-box;
+      overflow: hidden;
+      color: #444444;
+      @extend %clearfix;
+      li {
+        float: left;
+        width: 45%;
+        padding-left: 28px;
+        background: url(../images/down_blue.png) no-repeat left;
+        border-right: 1px solid #c8def1;
+        box-sizing: border-box;
+        margin-left: 36px;
+        @extend %one;
+        span {
+          color: #666666;
+          margin-right: 6px;
+        }
+        &:nth-of-type(2n) {
+          border-right: none;
+        }
+        &.red {
+          background: url(../images/down_red.png) no-repeat left;
+        }
+      }
+    }
+  }
+  &.w1200 {
+    width: 1200px;
+    .tk-zt {
+      width: 820px;
+      .zt-xz {
+        padding-left: 30px;
+        .xz-item {
+          width: 238px;
+          margin-right: 23px;
+          background: url(../images/bg_7_1200.png) no-repeat;
+        }
+      }
+      ul {
+        li {
+          width: 42%;
+          margin-left: 58px;
+        }
+      }
+    }
+  }
+}
+// 05_建筑热点模块-优惠券1100px
+.jz-yhq {
+  display: none;
+  width: 1100px;
+  height: 300px;
+  padding: 54px 0 0 398px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background: url(../images/bg_8.jpg) no-repeat;
+  margin: 10px auto;
+  .yhq-cont {
+    @extend %clearfix;
+    .c-item {
+      float: left;
+      width: 300px;
+      height: 136px;
+      padding-left: 70px;
+      padding-top: 20px;
+      box-sizing: border-box;
+      background: url(../images/bg_9.png) no-repeat;
+      color: #d60031;
+      text-align: center;
+      margin-right: 40px;
+      margin-bottom: 32px;
+      .i-sum {
+        font-size: 20px;
+        span {
+          font-size: 68px;
+          line-height: 68px;
+        }
+      }
+      .hint {
+        font-size: 18px;
+        color: #d40031;
+      }
+    }
+  }
+  .yhq-btn {
+    display: block;
+    width: 208px;
+    height: 48px;
+    line-height: 42px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #d60031;
+    text-align: center;
+    background: url(../images/btn_1.png) no-repeat;
+    margin-left: 218px;
+  }
+  &.w1200 {
+    width: 1200px;
+    background: url(../images/bg_8_1200.jpg) no-repeat;
+    .yhq-cont {
+      .c-item {
+        width: 310px;
+        background: url(../images/bg_9_1200.png) no-repeat;
+      }
+    }
+    .yhq-btn {
+      margin-left: 228px;
+    }
+  }
+}
+// 06_建筑热点模块-直播1100px
+.jz-live {
+  display: none;
+  width: 1100px;
+  font-size: 14px;
+  margin: 10px auto;
+  @extend %clearfix;
+  .live-l {
+    float: left;
+    width: 258px;
+    height: 300px;
+    padding: 24px 33px;
+    box-sizing: border-box;
+    text-align: center;
+    background: url(../images/bg_10.png) no-repeat;
+    .l-applet {
+      width: 192px;
+      padding: 9px;
+      box-sizing: border-box;
+      background: url(../images/bd.png) no-repeat;
+      background-size: 100% auto;
+      margin: 0 auto;
+      .img {
+        display: block;
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: inset 0px 0px 10px 1px rgba(65, 71, 147, 0.4);
+        border-radius: 12px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .l-explain {
+      font-size: 16px;
+      line-height: 36px;
+      color: #ffffff;
+    }
+    .l-hint {
+      height: 18px;
+      background: url(../images/dh_2.png) no-repeat center;
+    }
+  }
+  .live-r {
+    float: left;
+    width: 842px;
+    height: 300px;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
+    background: url(../images/bg_11.png) no-repeat;
+    ul {
+      @extend %clearfix;
+    }
+    li {
+      float: left;
+      width: 254px;
+      height: 122px;
+      padding: 24px 0 0 20px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      box-shadow: inset 0px 0px 16px 1px rgba(55, 145, 225, 0.33);
+      border-radius: 6px;
+      margin-right: 20px;
+      margin-bottom: 16px;
+      position: relative;
+      .r-time {
+        padding: 0 6px;
+        height: 24px;
+        line-height: 24px;
+        background-color: #e4f2ff;
+        border-radius: 0px 6px 0px 0px;
+        font-size: 12px;
+        color: #3791e1;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    .r-avatar {
+      float: left;
+      width: 62px;
+      height: 62px;
+      margin-right: 18px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .r-intro {
+      float: left;
+      width: 154px;
+      .i-title {
+        width: 100%;
+        @extend %one;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #444444;
+      }
+      .i-name {
+        font-size: 12px;
+        line-height: 12px;
+        color: #666666;
+        margin-bottom: 12px;
+        span {
+          @extend %in-b;
+          border-right: 1px solid #bebebe;
+          padding-right: 4px;
+          margin-right: 2px;
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+      a {
+        display: block;
+        width: 104px;
+        height: 26px;
+        line-height: 26px;
+        background-image: linear-gradient(77deg, #3791e1 0%, #4ebdf1 100%), linear-gradient(#3791e1, #3791e1);
+        background-blend-mode: normal, normal;
+        box-shadow: 0px 3px 8px 0px rgba(55, 145, 225, 0.39);
+        border-radius: 13px;
+        text-align: center;
+        font-size: 14px;
+        color: #ffffff;
+      }
+    }
+  }
+  &.w1200 {
+    width: 1200px;
+    .live-l {
+      width: 338px;
+      background: url(../images/bg_10_1200.png) no-repeat;
+    }
+    .live-r {
+      width: 862px;
+      padding: 20px 0 0 30px;
+      background: url(../images/bg_11_1200.png) no-repeat;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  $browser-default-font-size: 75px !default;
+  @function pr($px) {
+    @return $px / $browser-default-font-size * 1rem;
+  }
+  // 垂直居中，两端对齐
+  .space-between {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // 垂直居中，水平居中
+  .flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  // 垂直排布
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  // 07_建筑热点模块-题库wap
+  .jz-tk-wap {
+    display: none;
+    width: pr(750px);
+    margin: 0 auto;
+    padding: 0 pr(24px);
+    box-sizing: border-box;
+    font-size: pr(26px);
+    .tk-data {
+      padding: pr(40px) pr(30px) 0;
+      height: pr(440px);
+      background: url(../images/bg_6_wap.png) no-repeat;
+      background-size: 100% auto;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      .d-limit {
+        width: pr(123px);
+        height: pr(145px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .d-bt {
+        font-size: pr(31px);
+        line-height: pr(31px);
+        @include beforeAfter(pr(34px), pr(3px), #68b4f7, pr(132px), pr(132px));
+        margin-bottom: pr(14px);
+      }
+      .d-get {
+        height: pr(84px);
+        margin-bottom: pr(14px);
+        img {
+          height: 100%;
+        }
+      }
+      .d-explain {
+        display: inline-block;
+        padding: 0 pr(28px);
+        height: pr(46px);
+        line-height: pr(46px);
+        border-radius: pr(23px);
+        border: solid 1px #ffffff;
+        box-sizing: border-box;
+        font-size: pr(25px);
+        margin-bottom: pr(40px);
+      }
+      input {
+        width: 100%;
+        height: pr(56px);
+        line-height: pr(56px);
+        background-color: #ffffff;
+        border-radius: pr(3px);
+        margin-bottom: pr(30px);
+        text-align: center;
+      }
+      input[type="submit"] {
+        background-image: linear-gradient(124deg, #f47d1e 0%, #fbcb4b 100%), linear-gradient(#77b2e0, #77b2e0);
+        background-blend-mode: normal, normal;
+        box-shadow: 0px pr(3px) pr(9px) 0px rgba(244, 125, 30, 0.43);
+        font-size: pr(28px);
+        font-weight: bold;
+        color: #ffffff;
+      }
+    }
+    .tk-zt {
+      padding: pr(30px) pr(30px) 0;
+      background-color: #e1f1ff;
+      border-radius: pr(12px);
+      .xz-item {
+        padding-left: pr(30px);
+        height: pr(120px);
+        background: url(../images/bg_7_wap.png) no-repeat;
+        background-size: 100% 100%;
+        @extend .space-between;
+        .i-name {
+          font-size: pr(28px);
+          color: #444444;
+        }
+        .i-time {
+          font-size: pr(24px);
+          color: #888888;
+        }
+        .i-btn {
+          padding: 0 pr(27px) 0 pr(47px);
+          height: pr(56px);
+          line-height: pr(56px);
+          background-image: linear-gradient(124deg, #f47d1e 0%, #fbcb4b 100%), linear-gradient(#3791e1, #3791e1);
+          background-blend-mode: normal, normal;
+          box-shadow: 0px pr(3px) pr(6px) 0px rgba(244, 125, 30, 0.4);
+          border-radius: pr(28px) 0px 0px pr(28px);
+          color: #ffffff;
+        }
+      }
+      ul {
+        padding: pr(30px) 0 pr(14px);
+        color: #444444;
+        li {
+          line-height: pr(36px);
+          padding-left: pr(52px);
+          background: url(../images/down_blue_wap.png) no-repeat left;
+          background-size: pr(32px) pr(32px);
+          margin-bottom: pr(16px);
+          span {
+            color: #666666;
+            margin-right: pr(6px);
+          }
+          &.red {
+            background: url(../images/down_red_wap.png) no-repeat left;
+            background-size: pr(32px) pr(32px);
+          }
+        }
+      }
+    }
+  }
+  // 08_建筑热点模块-直播wap
+  .jz-live-wap {
+    display: none;
+    padding: 0 pr(24px);
+    font-size: pr(26px);
+    .live-r {
+      background: url(../images/bg_11_wap.png) no-repeat;
+      background-size: 100% 100%;
+      ul {
+        padding: pr(92px) pr(20px) pr(30px);
+        @extend .space-between;
+      }
+      li {
+        width: pr(321px);
+        padding: pr(74px) pr(30px) pr(30px);
+        box-sizing: border-box;
+        background-color: #ffffff;
+        box-shadow: inset 0px 0px pr(16px) 1px rgba(55, 145, 225, 0.33);
+        border-radius: pr(6px);
+        text-align: center;
+        position: relative;
+        .r-avatar {
+          width: pr(121px);
+          height: pr(121px);
+          position: absolute;
+          top: pr(-60px);
+          left: 0;
+          right: 0;
+          margin: auto;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+      .r-time {
+        font-size: pr(24px);
+        line-height: pr(24px);
+        color: #cf3340;
+        margin-bottom: pr(10px);
+      }
+      .r-intro {
+        .i-title {
+          font-size: pr(28px);
+          line-height: pr(36px);
+          font-weight: bold;
+          color: #444444;
+          margin-bottom: pr(10px);
+        }
+        .i-name {
+          font-size: pr(24px);
+          line-height: pr(24px);
+          color: #666666;
+          margin-bottom: pr(20px);
+          span {
+            display: inline-block;
+            border-right: 1px solid #bebebe;
+            padding-right: pr(8px);
+            margin-right: pr(4px);
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+        a {
+          display: block;
+          height: pr(52px);
+          line-height: pr(52px);
+          background-image: linear-gradient(77deg, #cf3340 0%, #f47d1e 100%), linear-gradient(#3791e1, #3791e1);
+          background-blend-mode: normal, normal;
+          box-shadow: 0px pr(3px) pr(8px) 0px rgba(207, 51, 64, 0.39);
+          border-radius: pr(26px);
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+    .live-l {
+      padding: pr(20px) 0 pr(30px);
+      background: url(../images/bg_10_wap.png) no-repeat;
+      background-size: 100% 100%;
+      @extend .flex-center;
+      .l-applet {
+        width: pr(244px);
+        height: pr(244px);
+        padding: pr(11px);
+        box-sizing: border-box;
+        background: url(../images/bd.png) no-repeat;
+        background-size: 100% 100%;
+        margin-right: pr(60px);
+        .img {
+          display: block;
+          padding: pr(16px);
+          background-color: #ffffff;
+          box-shadow: inset 0px 0px p(10px) 1px rgba(65, 71, 147, 0.4);
+          border-radius: pr(12px);
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .l-explain {
+        font-size: pr(28px);
+        font-weight: bold;
+        line-height: pr(42px);
+        color: #333333;
+      }
+      .l-hint {
+        width: pr(152px);
+        height: pr(27px);
+        background: url(../images/dh_wap.png) no-repeat;
+        background-size: 100% 100%;
+        margin-top: pr(10px);
+      }
+    }
+  }
+  // 09_建筑热点模块-优惠券wap
+  .jz-yhq-wap {
+    width: 100%;
+    height: pr(300px);
+    background: url(../images/bg_8_wap.jpg) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    @extend .space-between;
+    .yhq-btn {
+      width: pr(208px);
+      height: pr(48px);
+      line-height: pr(42px);
+      font-size: pr(16px);
+      font-weight: bold;
+      color: #d60031;
+      
+      background: url(../images/btn_1.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .yhq-cont {
+      .c-item {
+        width: pr(280px);
+        height: pr(115px);
+        padding-left: pr(70px);
+        padding-top: pr(10px);
+        box-sizing: border-box;
+        color: #d60031;
+        background: url(../images/bg_9.png) no-repeat;
+        background-size: 100% 100%;
+        margin-bottom: pr(17px);
+        .i-sum {
+          font-size: pr(20px);
+          span {
+            font-size: pr(68px);
+            line-height: pr(68px);
+          }
+        }
+        .hint {
+          font-size: pr(18px);
+          color: #d40031;
+        }
       }
     }
   }

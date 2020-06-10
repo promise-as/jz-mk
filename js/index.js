@@ -19,5 +19,15 @@ $(function(){
   // showMask('.jz-mask', 8000);
   // 02_建筑软文-弹窗
   closeFixed('.jz-popup .close', '.jz-mask');
-
+  // 鼠标移入
+  function mouseEnter(head, cont, classname){
+    $(head).each(function(i){
+      var that = this;
+      $(that).mouseenter(function(){
+        $(that).addClass(classname).siblings().removeClass(classname);
+        $($(cont)[i]).addClass(classname).siblings().removeClass(classname);
+      });
+    });
+  };
+  mouseEnter('.bm-head .h-item', '.bm-cont .c-item', 'on');
 });
