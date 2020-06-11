@@ -13,10 +13,9 @@ $(function(){
     sId = setInterval(function(){
       $(mask).show();
       clearInterval(sId);
-      console.log(111);
     }, t);
   }
-  // showMask('.jz-mask', 8000);
+  showMask('.jz-mask', 8000);
   // 02_建筑软文-弹窗
   closeFixed('.jz-popup .close', '.jz-mask');
   // 鼠标移入
